@@ -1,8 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CodeFirstApp.Models;
+using Microsoft.EntityFrameworkCore;
 
-using DesktopApp.Models;
-
-namespace DesktopApp;
+namespace CodeFirstApp;
 
 public sealed class ApplicationDbContext: DbContext
 {

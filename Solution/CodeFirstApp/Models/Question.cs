@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DesktopApp.Models;
+namespace CodeFirstApp.Models;
 
 public class Question
 {

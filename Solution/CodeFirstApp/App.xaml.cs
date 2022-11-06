@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace DesktopApp
+namespace CodeFirstApp
 {
     /// <summary>
     /// Interaction logic for App.xaml

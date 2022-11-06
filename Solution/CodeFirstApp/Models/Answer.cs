@@ -1,4 +1,4 @@
-﻿namespace DesktopApp.Models;
+﻿namespace CodeFirstApp.Models;
 
 public class Answer
 {

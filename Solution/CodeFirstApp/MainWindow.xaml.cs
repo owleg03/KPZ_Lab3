@@ -1,12 +1,12 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Data;
-using System.ComponentModel;
-using DesktopApp.Models;
+using CodeFirstApp.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DesktopApp
+namespace CodeFirstApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

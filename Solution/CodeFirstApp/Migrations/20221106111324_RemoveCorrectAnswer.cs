@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace DesktopApp.Migrations
+namespace CodeFirstApp.Migrations
 {
     public partial class RemoveCorrectAnswer : Migration
     {
