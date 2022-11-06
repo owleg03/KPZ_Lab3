@@ -40,11 +40,6 @@ namespace DbFirstApp.Migrations
                     { 10, "Mammal", "C", 3 },
                     { 11, "Bird", "D", 3 }
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Answer_question_id",
-                table: "Answer",
-                column: "question_id");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
