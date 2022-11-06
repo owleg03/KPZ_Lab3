@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DesktopApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221106111856_AddSeeding")]
-    partial class AddSeeding
+    [Migration("20221106113201_AddLazyLoading")]
+    partial class AddLazyLoading
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace DesktopApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("DesktopApp.Models.Answer", b =>
+            modelBuilder.Entity("CodeFirstApp.Models.Answer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -128,7 +128,7 @@ namespace DesktopApp.Migrations
                         });
                 });
 
-            modelBuilder.Entity("DesktopApp.Models.Question", b =>
+            modelBuilder.Entity("CodeFirstApp.Models.Question", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -181,16 +181,16 @@ namespace DesktopApp.Migrations
                         });
                 });
 
-            modelBuilder.Entity("DesktopApp.Models.Answer", b =>
+            modelBuilder.Entity("CodeFirstApp.Models.Answer", b =>
                 {
-                    b.HasOne("DesktopApp.Models.Question", null)
+                    b.HasOne("CodeFirstApp.Models.Question", null)
                         .WithMany("Answers")
                         .HasForeignKey("QuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DesktopApp.Models.Question", b =>
+            modelBuilder.Entity("CodeFirstApp.Models.Question", b =>
                 {
                     b.Navigation("Answers");
                 });

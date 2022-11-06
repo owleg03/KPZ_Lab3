@@ -24,7 +24,7 @@ namespace DesktopApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("DesktopApp.Models.Answer", b =>
+            modelBuilder.Entity("CodeFirstApp.Models.Answer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,7 +50,7 @@ namespace DesktopApp.Migrations
                     b.ToTable("Answers");
                 });
 
-            modelBuilder.Entity("DesktopApp.Models.Question", b =>
+            modelBuilder.Entity("CodeFirstApp.Models.Question", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -78,16 +78,16 @@ namespace DesktopApp.Migrations
                     b.ToTable("Questions");
                 });
 
-            modelBuilder.Entity("DesktopApp.Models.Answer", b =>
+            modelBuilder.Entity("CodeFirstApp.Models.Answer", b =>
                 {
-                    b.HasOne("DesktopApp.Models.Question", null)
+                    b.HasOne("CodeFirstApp.Models.Question", null)
                         .WithMany("Answers")
                         .HasForeignKey("QuestionId");
                 });
 
-            modelBuilder.Entity("DesktopApp.Models.Question", b =>
+            modelBuilder.Entity("CodeFirstApp.Models.Question", b =>
                 {
-                    b.HasOne("DesktopApp.Models.Answer", "CorrectAnswer")
+                    b.HasOne("CodeFirstApp.Models.Answer", "CorrectAnswer")
                         .WithMany()
                         .HasForeignKey("CorrectAnswerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -96,7 +96,7 @@ namespace DesktopApp.Migrations
                     b.Navigation("CorrectAnswer");
                 });
 
-            modelBuilder.Entity("DesktopApp.Models.Question", b =>
+            modelBuilder.Entity("CodeFirstApp.Models.Question", b =>
                 {
                     b.Navigation("Answers");
                 });
